@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card - Nwankwo Jachinma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article class="profile-card" data-testid="test-profile-card">
+            <header>
+                <figure>
+                    <img src="https://ui-avatars.com/api/?name=Nwankwo+Jachinma&background=4c51bf&color=fff" 
+                         alt="Nwankwo Jachinma Avatar" 
+                         data-testid="test-user-avatar">
+                </figure>
+                <h1 data-testid="test-user-name">Nwankwo Jachinma</h1>
+            </header>
+
+            <p data-testid="test-user-bio">
+                200-level Insurance student at the University of Lagos. I am a disciplined learner 
+                pursuing a career in Full-stack development and financial risk management.
+            </p>
+
+            <section class="time-section">
+                <p>Current Epoch Time (ms):</p>
+                <span id="current-time" data-testid="test-user-time" aria-live="polite"></span>
+            </section>
+
+            <nav class="social-links" data-testid="test-user-social-links">
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+            </nav>
+
+            <section class="lists-container">
+                <div class="list-group">
+                    <h3>Hobbies</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Chess</li>
+                        <li>African Literature</li>
+                        <li>Logic Puzzles</li>
+                    </ul>
+                </div>
+
+                <div class="list-group">
+                    <h3>Dislikes</h3>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Unstructured Data</li>
+                        <li>Late Deadlines</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        // Update the epoch time every 100ms
+        function updateTime() {
+            document.getElementById('current-time').textContent = Date.now();
+        }
+        setInterval(updateTime, 100);
+        updateTime();
+    </script>
+</body>
+</html>
